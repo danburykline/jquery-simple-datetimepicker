@@ -338,13 +338,14 @@
 				$picker.parent().css('top', ($input.offset().top + input_outer_height) + 'px');
 			}
 			// Move position of a picker - horizontal
-			if($picker.parent().width() + $input.offset().left > $(window).width()) {
-				// Display left side stick to window
-				$picker.parent().css('left', (($(window).width() - $picker.parent().width()) / 2) + 'px');
-			} else {
+			// Commented out by Kerrin (DK), so the picker is always locked to the input field.
+//			if($picker.parent().width() + $input.offset().left > $(window).width()) {
+//				// Display left side stick to window
+//				$picker.parent().css('left', (($(window).width() - $picker.parent().width()) / 2) + 'px');
+//			} else {
 				// Display left side stick to input
 				$picker.parent().css('left', $input.offset().left + 'px');
-			}
+//			}
 			// Display on most top of the z-index
 			$picker.parent().css('z-index', 100000);
 		}
